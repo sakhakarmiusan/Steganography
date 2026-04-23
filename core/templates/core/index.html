@@ -11,17 +11,18 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="icon" type="image/x-icon" href="/media/icons/lib.png" >
+  <link rel="icon" type="image/x-icon" href="/media/icons/lib.png">
 </head>
 
 <body>
   <header>
-		<nav class=" navbar navbar-expand-lg  ">
-			<div class="container-fluid ps-md-5 pe-md-1 p-md-2">
-			  <a href="{% url 'home'%}">
+    <nav class=" navbar navbar-expand-lg  ">
+      <div class="container-fluid ps-md-5 pe-md-1 p-md-2">
+        <a href="{% url 'home'%}">
           <img src="{% static 'camouflage.png'%}" class="logopic" width="250px">
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon">
             <i class="fa fa-navicon" style="font-size:25px;"></i>
           </span>
@@ -31,18 +32,20 @@
             <li class="nav-item p-md-4 p-sm-2">
               <a href="{%url 'home' %}">Home</a>
             </li>
-            <li class="nav-item p-md-4" >
+            <li class="nav-item p-md-4">
               <div class="dropdown">Encode
                 <ul class="dropdown-menu">
-                  <li class="nav-item"><a href="{%url 'encode' %}">Video Encoding </a></li><hr>
+                  <li class="nav-item"><a href="{%url 'encode' %}">Video Encoding </a></li>
+                  <hr>
                   <li class="nav-item"><a href="{%url 'image-steg' %}">Image Encoding</a></li>
                 </ul>
               </div>
             </li>
-            <li class="nav-item p-md-4" >
+            <li class="nav-item p-md-4">
               <div class="dropdown">Decode
                 <ul class="dropdown-menu">
-                  <li class="nav-item"><a href="{%url 'decode' %}">Video Decoding</a></li><hr>
+                  <li class="nav-item"><a href="{%url 'decode' %}">Video Decoding</a></li>
+                  <hr>
                   <li class="nav-item"><a href="{%url 'image-decode' %}">Image Decoding</a></li>
                 </ul>
               </div>
@@ -51,11 +54,11 @@
               <a href="{%url 'aboutus' %}">About</a>
             </li>
           </ul>
+        </div>
       </div>
-			</div>
-		</nav>
-	</header>
- 
+    </nav>
+  </header>
+
   {% if messages %}
   <div class="container" id="message-container">
     {% for msg in messages %}
@@ -66,7 +69,7 @@
   </div>
   {% endif %}
   <main class="mt-5 ">
-  {% block content %} {% endblock%}
+    {% block content %} {% endblock%}
   </main>
   <!-- <footer >
     <div class="footer">
@@ -86,18 +89,17 @@
       
       <div class="socials">
         <h1>View Our Project:</h1>
-        <a href="https://github.com/whyme-duh/video-steganography/tree/master" class="fa fa-github"></a>
       </div>
     </div>
   </footer> -->
   <script>
     window.addEventListener('load', () => {
-        setTimeout(() => {
-            const messageContainer = document.getElementById('message-container');
-            if (messageContainer) {
-                messageContainer.style.display = 'none';
-            }
-        }, 3000); // 3000 milliseconds = 3 seconds
+      setTimeout(() => {
+        const messageContainer = document.getElementById('message-container');
+        if (messageContainer) {
+          messageContainer.style.display = 'none';
+        }
+      }, 3000); // 3000 milliseconds = 3 seconds
     });
   </script>
   <script defer src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

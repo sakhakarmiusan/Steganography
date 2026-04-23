@@ -4,8 +4,8 @@
 *.pyc
 __pycache__
 db.sqlite3
-media
-migrations
+media/
+# NOTE: It is usually recommended to commit Django migrations, so 'migrations/' is not ignored here.
 
 # Backup files # 
 *.bak 
@@ -73,7 +73,13 @@ wheels/
 *.spec 
 
 *.mp4
+*.avi
+temp_video.avi
 
+# Temporary files created while fixing encodings
+requirements_original_utf16.txt
+requirements_utf8.txt
+requirements_fixed.txt
 
 # Installer logs 
 pip-log.txt 
