@@ -6,7 +6,6 @@
 
 <div class="output-container container ">
     {% if request.session.image_location %}
-        <!-- <img src="/{{request.session.image_location}}" alt="image-steg" width="500px" height="500px"> -->
         <div class="output-information">
             <div class="card-design d-flex align-items-center justify-content-between  ">
               <h5><b>Completion Time</b> {{request.session.completion_time}} s</h5>
@@ -32,14 +31,14 @@
           <h3 class="mt-5">Available Features:</h3>
           <div class="other-features d-flex justify-content-evenly w-100">
             <div class="video d-flex flex-column w-50 m-2">
-              <h5 style="color: rgb(90, 88, 88);" class="mt-md-4">For Video</h5>
+              <h5 class="mt-md-4">For Video</h5>
               <div class="btn-list d-flex justify-content-evenly">
                 <a href="{% url 'encode' %}" id="pink-button-success">Video Encoding</a>
                 <a href="{% url 'decode'%}" id="pink-button-two-success">Video Decoding</a>
               </div>
             </div>
             <div class="image d-flex flex-column w-50 m-2">
-              <h5 style="color: rgb(90, 88, 88);" class="mt-md-4">For Image</h5>
+              <h5 class="mt-md-4">For Image</h5>
               <div class="btn-list d-flex justify-content-evenly">
                 <a href="{% url 'image-steg' %}" id="pink-button-success">Image Encoding</a>
                 <a href="{% url 'image-decode'%}" id="pink-button-two-success" >Image Decoding</a>
